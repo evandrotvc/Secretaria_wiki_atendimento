@@ -1,0 +1,964 @@
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#index as HTML
+  Rendering attendances/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#search as HTML
+  Parameters: {"p"=>{"search"=>"Nada"}}
+Redirected to http://test.host/attendances
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#search as HTML
+  Parameters: {"p"=>{"search"=>""}}
+Redirected to http://test.host/attendances
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#new as HTML
+  Rendering attendances/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 26ms (Views: 1.3ms | ActiveRecord: 17.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (24.6ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (2.9ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.650193"], ["updated_at", "2019-12-09 17:15:34.650193"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+Processing by AttendancesController#destroy as HTML
+  Parameters: {"id"=>"575"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 575], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (40.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 575]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (43.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 575]]
+  [1m[36mAttendance Destroy (8.0ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 575]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances
+Completed 302 Found in 126ms (ActiveRecord: 95.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.794160"], ["updated_at", "2019-12-09 17:15:34.794160"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#destroy as HTML
+  Parameters: {"id"=>"576"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 576], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 576]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 576]]
+  [1m[36mAttendance Destroy (0.4ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 576]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+Processing by AttendancesController#create as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.5ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.811618"], ["updated_at", "2019-12-09 17:15:34.811618"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/577
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.819951"], ["updated_at", "2019-12-09 17:15:34.819951"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#create as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[35m (52.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering attendances/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 66ms (Views: 1.3ms | ActiveRecord: 53.6ms)
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" ORDER BY "attendances"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.915033"], ["updated_at", "2019-12-09 17:15:34.915033"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#update as HTML
+  Parameters: {"attendance"=>{"content"=>"te", "title"=>"tes"}, "id"=>"579"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 579], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 579]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "tes"], ["id", 579], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "te"], ["id", 579], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.4ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "attendances"."id" = $4[0m  [["title", "tes"], ["content", "te"], ["updated_at", "2019-12-09 17:15:34.923301"], ["id", 579]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/579
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 579], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-09 17:15:34.933714"], ["updated_at", "2019-12-09 17:15:34.933714"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#update as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}, "id"=>"580"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 580], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 580]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "Teste"], ["id", 580], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "Tes"], ["id", 580], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/580
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "casa legal"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "filme"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "duro de matar"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "acao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "duro de matar"], ["content", "acao"], ["created_at", "2019-12-09 17:15:34.957432"], ["updated_at", "2019-12-09 17:15:34.957432"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-09 17:15:34.963569"], ["updated_at", "2019-12-09 17:15:34.963569"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-09 17:15:34.968471"], ["updated_at", "2019-12-09 17:15:34.968471"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "novo titulo"], ["id", 583], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "conexao"], ["id", 583], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.3ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "updated_at" = $2 WHERE "attendances"."id" = $3[0m  [["title", "novo titulo"], ["updated_at", "2019-12-09 17:15:34.971804"], ["id", 583]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-09 17:15:34.976561"], ["updated_at", "2019-12-09 17:15:34.976561"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "Rede"], ["id", 584], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "conexao reporter"], ["id", 584], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.3ms)[0m  [1m[33mUPDATE "attendances" SET "content" = $1, "updated_at" = $2 WHERE "attendances"."id" = $3[0m  [["content", "conexao reporter"], ["updated_at", "2019-12-09 17:15:34.980630"], ["id", 584]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-09 17:15:34.985843"], ["updated_at", "2019-12-09 17:15:34.985843"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "funcionario"], ["id", 585], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "proativo"], ["id", 585], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.3ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "attendances"."id" = $4[0m  [["title", "funcionario"], ["content", "proativo"], ["updated_at", "2019-12-09 17:15:34.989405"], ["id", 585]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "casa"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "boa"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "casa"], ["content", "boa"], ["created_at", "2019-12-09 17:15:34.994330"], ["updated_at", "2019-12-09 17:15:34.994330"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 586]]
+  [1m[36mAttendance Destroy (0.4ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 586]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 586], ["record_type", "Attendance"], ["name", "files"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Karleen Thompson"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Sheilah Pagac"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Karleen Thompson"], ["content", "Sheilah Pagac"], ["created_at", "2019-12-09 17:15:35.012537"], ["updated_at", "2019-12-09 17:15:35.012537"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (4.8ms) [0m[32mUploaded file to key: m4AyXhy2WVGc9vsuqDn9kL1X (checksum: C1vn4HdiC3wdCAwxcpAKmw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "m4AyXhy2WVGc9vsuqDn9kL1X"], ["filename", "report.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 13469], ["checksum", "C1vn4HdiC3wdCAwxcpAKmw=="], ["created_at", "2019-12-09 17:15:35.080334"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Create (41.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "files"], ["record_type", "Attendance"], ["record_id", 587], ["blob_id", 2], ["created_at", "2019-12-09 17:15:35.099469"]]
+  [1m[36mAttendance Update (0.4ms)[0m  [1m[33mUPDATE "attendances" SET "updated_at" = $1 WHERE "attendances"."id" = $2[0m  [["updated_at", "2019-12-09 17:15:35.142735"], ["id", 587]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7871159e-cea7-4fba-8ab4-653f8d9d1653) to Async(default) with arguments: #<GlobalID:0x00007fe3a6d1f920 @uri=#<URI::GID gid://secretaria-ppgi/ActiveStorage::Blob/2>>
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/attendances" for 127.0.0.1 at 2019-12-09 14:15:35 -0300
+Processing by AttendancesController#index as HTML
+  Rendering attendances/index.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances"[0m
+  Rendered attendances/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 684ms (Views: 675.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (41.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (21.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (55.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#index as HTML
+  Rendering attendances/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (41.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#search as HTML
+  Parameters: {"p"=>{"search"=>"Nada"}}
+Redirected to http://test.host/attendances
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#search as HTML
+  Parameters: {"p"=>{"search"=>""}}
+Redirected to http://test.host/attendances
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by AttendancesController#new as HTML
+  Rendering attendances/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 69ms (Views: 1.4ms | ActiveRecord: 59.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (29.8ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (6.2ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:46.653326"], ["updated_at", "2019-12-11 12:51:46.653326"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+Processing by AttendancesController#destroy as HTML
+  Parameters: {"id"=>"588"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 588], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (41.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 588]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (42.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 588]]
+  [1m[36mAttendance Destroy (1.8ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 588]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances
+Completed 302 Found in 127ms (ActiveRecord: 90.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.4ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:46.845612"], ["updated_at", "2019-12-11 12:51:46.845612"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#destroy as HTML
+  Parameters: {"id"=>"589"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 589], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 589]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 589]]
+  [1m[36mAttendance Destroy (0.4ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 589]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+Processing by AttendancesController#create as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:46.862704"], ["updated_at", "2019-12-11 12:51:46.862704"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/590
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.4ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:46.871589"], ["updated_at", "2019-12-11 12:51:46.871589"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#create as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[35m (41.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering attendances/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered attendances/new.html.erb within layouts/application (1.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 65ms (Views: 2.5ms | ActiveRecord: 42.0ms)
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" ORDER BY "attendances"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:46.985988"], ["updated_at", "2019-12-11 12:51:46.985988"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#update as HTML
+  Parameters: {"attendance"=>{"content"=>"te", "title"=>"tes"}, "id"=>"592"}
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 592], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 592]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "tes"], ["id", 592], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "te"], ["id", 592], ["LIMIT", 1]]
+  [1m[36mAttendance Update (43.2ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "attendances"."id" = $4[0m  [["title", "tes"], ["content", "te"], ["updated_at", "2019-12-11 12:51:46.997309"], ["id", 592]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/592
+Completed 302 Found in 54ms (ActiveRecord: 45.1ms)
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 592], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Teste"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Tes"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Teste"], ["content", "Tes"], ["created_at", "2019-12-11 12:51:47.051945"], ["updated_at", "2019-12-11 12:51:47.051945"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AttendancesController#update as HTML
+  Parameters: {"attendance"=>{"content"=>"Tes", "title"=>"Teste"}, "id"=>"593"}
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT  "attendances".* FROM "attendances" WHERE "attendances"."id" = $1 LIMIT $2[0m  [["id", 593], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_type" = $1 AND "active_storage_attachments"."name" = $2 AND "active_storage_attachments"."record_id" = $3[0m  [["record_type", "Attendance"], ["name", "files"], ["record_id", 593]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "Teste"], ["id", 593], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "Tes"], ["id", 593], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/attendances/593
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "casa legal"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "filme"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "duro de matar"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "acao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.6ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "duro de matar"], ["content", "acao"], ["created_at", "2019-12-11 12:51:47.085990"], ["updated_at", "2019-12-11 12:51:47.085990"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (2.5ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-11 12:51:47.095946"], ["updated_at", "2019-12-11 12:51:47.095946"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-11 12:51:47.105039"], ["updated_at", "2019-12-11 12:51:47.105039"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "novo titulo"], ["id", 596], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "conexao"], ["id", 596], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.3ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "updated_at" = $2 WHERE "attendances"."id" = $3[0m  [["title", "novo titulo"], ["updated_at", "2019-12-11 12:51:47.109796"], ["id", 596]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.4ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-11 12:51:47.116957"], ["updated_at", "2019-12-11 12:51:47.116957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "Rede"], ["id", 597], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "conexao reporter"], ["id", 597], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.5ms)[0m  [1m[33mUPDATE "attendances" SET "content" = $1, "updated_at" = $2 WHERE "attendances"."id" = $3[0m  [["content", "conexao reporter"], ["updated_at", "2019-12-11 12:51:47.123892"], ["id", 597]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Rede"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "conexao"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rede"], ["content", "conexao"], ["created_at", "2019-12-11 12:51:47.129982"], ["updated_at", "2019-12-11 12:51:47.129982"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["title", "funcionario"], ["id", 598], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 AND "attendances"."id" != $2 LIMIT $3[0m  [["content", "proativo"], ["id", 598], ["LIMIT", 1]]
+  [1m[36mAttendance Update (0.4ms)[0m  [1m[33mUPDATE "attendances" SET "title" = $1, "content" = $2, "updated_at" = $3 WHERE "attendances"."id" = $4[0m  [["title", "funcionario"], ["content", "proativo"], ["updated_at", "2019-12-11 12:51:47.136614"], ["id", 598]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "casa"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "boa"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "casa"], ["content", "boa"], ["created_at", "2019-12-11 12:51:47.143972"], ["updated_at", "2019-12-11 12:51:47.143972"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."attendance_id" = $1[0m  [["attendance_id", 599]]
+  [1m[36mAttendance Destroy (0.4ms)[0m  [1m[31mDELETE FROM "attendances" WHERE "attendances"."id" = $1[0m  [["id", 599]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 599], ["record_type", "Attendance"], ["name", "files"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."title" = $1 LIMIT $2[0m  [["title", "Vada Dach"], ["LIMIT", 1]]
+  [1m[36mAttendance Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attendances" WHERE "attendances"."content" = $1 LIMIT $2[0m  [["content", "Ethel Cronin"], ["LIMIT", 1]]
+  [1m[36mAttendance Create (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Vada Dach"], ["content", "Ethel Cronin"], ["created_at", "2019-12-11 12:51:47.181584"], ["updated_at", "2019-12-11 12:51:47.181584"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (4.6ms) [0m[32mUploaded file to key: LE3fyqSam4b8dgE9e4BygWZW (checksum: C1vn4HdiC3wdCAwxcpAKmw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "LE3fyqSam4b8dgE9e4BygWZW"], ["filename", "report.pdf"], ["content_type", "application/pdf"], ["metadata", "{\"identified\":true}"], ["byte_size", 13469], ["checksum", "C1vn4HdiC3wdCAwxcpAKmw=="], ["created_at", "2019-12-11 12:51:47.285786"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "files"], ["record_type", "Attendance"], ["record_id", 600], ["blob_id", 3], ["created_at", "2019-12-11 12:51:47.305882"]]
+  [1m[36mAttendance Update (0.3ms)[0m  [1m[33mUPDATE "attendances" SET "updated_at" = $1 WHERE "attendances"."id" = $2[0m  [["updated_at", "2019-12-11 12:51:47.307840"], ["id", 600]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f1935eb8-223e-410f-a46e-ea07737bc102) to Async(default) with arguments: #<GlobalID:0x00007f9c3d010488 @uri=#<URI::GID gid://secretaria-ppgi/ActiveStorage::Blob/3>>
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/attendances" for 127.0.0.1 at 2019-12-11 09:51:47 -0300
+Processing by AttendancesController#index as HTML
+  Rendering attendances/index.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances"[0m
+  Rendered attendances/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 717ms (Views: 707.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (41.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (42.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (137.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
