@@ -188,7 +188,7 @@ GEM
     multi_test (0.1.2)
     native-package-installer (1.0.8)
     nio4r (2.5.2)
-    nokogiri (1.10.4)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     parser (2.6.5.0)
       ast (~> 2.4.0)
