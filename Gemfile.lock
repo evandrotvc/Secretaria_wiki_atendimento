@@ -126,7 +126,7 @@ GEM
       railties (>= 4.2.0)
     fastri (0.3.1.1)
     ffaker (2.13.0)
-    ffi (1.11.1)
+    ffi (1.15.5)
     flay (2.12.1)
       erubis (~> 2.7.0)
       path_expander (~> 1.0)
@@ -149,9 +149,9 @@ GEM
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    image_processing (1.9.3)
+    image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.13, < 3)
+      ruby-vips (>= 2.0.17, < 3)
     io-like (0.3.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
@@ -178,7 +178,9 @@ GEM
     mime-types (3.3)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
-    mimemagic (0.3.3)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_magick (4.9.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -261,8 +263,8 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
-    ruby-vips (2.0.16)
-      ffi (~> 1.9)
+    ruby-vips (2.1.4)
+      ffi (~> 1.12)
     ruby_dep (1.5.0)
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
@@ -362,7 +364,7 @@ DEPENDENCIES
   factory_bot_rails
   fastri
   ffaker
-  image_processing (~> 1.2)
+  image_processing (~> 1.12)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
